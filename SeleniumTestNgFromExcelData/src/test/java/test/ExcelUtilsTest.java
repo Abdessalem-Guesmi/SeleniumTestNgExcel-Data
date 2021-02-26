@@ -27,9 +27,11 @@ public class ExcelUtilsTest {
 			String birthday) throws Exception {
 		int id_ = Integer.parseInt(id);
 		Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(birthday);
-
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = formatter.parse(birthday);
+		String formattedDate = formatter.format(date);
 		System.out.println(id_ + " | " + first_name + " | " + last_name + " | " + email + " | " + gender + " | "
-				+ ip_address + " | " + date1);
+				+ ip_address + " | " + formattedDate);
 
 	}
 
